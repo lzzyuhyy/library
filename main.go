@@ -16,5 +16,8 @@ func main() {
 	g.Use()
 	router.Router(g)
 
-	g.Run(":9999")
+	err = g.Run(":9999")
+	if err != nil {
+		return
+	}
 }
